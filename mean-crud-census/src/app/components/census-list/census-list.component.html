@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <div class="text-center mb-4">
+      <h2 class="text-dark">Census Records</h2>
+  </div>
+
+  <div class="table-responsive">
+      <table class="table table-bordered table-hover align-middle">
+          <thead class="table-dark">
+              <tr class="text-center">
+                  <th scope="col">Year</th>
+                  <th scope="col">Census Taker</th>
+                  <th scope="col">Number of Household Members</th>
+                  <th scope="col">State</th>
+                  <th scope="col">City</th>
+                  <th scope="col">Actions</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let census of Census; let i = index" class="text-center">
+                  <td>{{census.census_year}}</td>
+                  <td>{{census.takers_name}}</td>
+                  <td>{{census.household_members}}</td>
+                  <td>{{census.state}}</td>
+                  <td>{{census.city}}</td>
+                  <td>
+                      <button class="btn btn-sm btn-success me-2" (click)="onEdit(census._id)">
+                          <i class="bi bi-pencil-square"></i> Edit
+                      </button>
+                      <button class="btn btn-sm btn-danger" (click)="onDelete(census._id)">
+                          <i class="bi bi-trash"></i> Delete
+                      </button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

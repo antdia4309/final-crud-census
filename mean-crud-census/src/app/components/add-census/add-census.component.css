@@ -1,0 +1,89 @@
+/* Ensure the body fills the viewport and centers content */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the card container */
+.card {
+    width: 100%;
+    max-width: 600px; /* Increased max-width to accommodate two-column layout */
+    padding: 30px; /* Slightly increased padding for better spacing */
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e6e6e6;
+}
+
+/* Style for the heading */
+.card h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px; /* Increased spacing for heading */
+    color: #333;
+}
+
+/* Style for the form inputs */
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    margin-bottom: 10px; /* Reduced margin for tighter spacing */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for labels */
+label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Added more spacing for clarity */
+    display: block;
+    font-size: 0.9rem;
+}
+
+/* Style for the button */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    font-size: 1.1rem;
+    padding: 12px; /* Slightly larger padding for a prominent button */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Responsive layout adjustments */
+.row {
+    gap: 10px; /* Increased spacing between rows */
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem; /* Smaller heading for mobile */
+    }
+
+    .btn-success {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
